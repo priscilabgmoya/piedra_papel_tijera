@@ -23,19 +23,27 @@
     <main>
         <section class="container">
             <p class="h1 text-center"> Piedra , Papel , Tijera </p>
-            <p class="h2 text-center text-danger">TIEMPO: <span id="reloj"></span></p>
             <article class="row d-flex justify-content-center">
+                <span class="col-xl-5 m-1 col-md-5 col-lg-5 col-sm-5 d-flex justify-content-center" >
+                    <button type="button" id="btnIniciarPartida" class="btn btn-warning btn-lg">Jugar Partida</button>
+                </span>
+                <span class="col-xl-5 m-1 col-md-5 col-lg-5 col-sm-5 d-flex justify-content-center" >
+                    <button type="button" id="btnFinalizarPartida" class="btn btn-danger btn-lg">Finalizar Partida</button>
+                </span>
+            </article>
+            <article class="row d-flex justify-content-center">
+                <p class="h2 text-center text-danger">TIEMPO: <span id="reloj"></span></p>
                 <span class="col-xl-5 m-1 col-md-5 col-lg-5 col-sm-5 "  id="panel_pTp_usuario">
                     <p class="h3 text-center"> Usuario - Puntos: <span id="puntos_usuario" class="text-danger">0</span></p>
                     <fieldset class="d-flex row ">
                         <label class="my-2">
-                            <input  type="radio" name="opcionJugador" value="piedra"><div  id= "imagen_piedra"><img src="./img/piedra.svg"></div>
+                            <input  type="radio" name="opcionJugador" value="piedra" disabled><div  id= "imagen_piedra"><img src="./img/piedra.svg"></div>
                         </label>
                         <label class="my-2">
-                            <input type="radio" name="opcionJugador" value="papel"><div  id= "imagen_papel"><img src="../img/papel.svg"></div>
+                            <input type="radio" name="opcionJugador" value="papel" disabled><div  id= "imagen_papel"><img src="../img/papel.svg"></div>
                         </label>
                         <label class="my-2">
-                            <input  type="radio" name="opcionJugador" value="tijera"><div   id= "imagen_tijera"><img src="../img/tijera.svg"></div>
+                            <input  type="radio" name="opcionJugador" value="tijera" disabled><div   id= "imagen_tijera"><img src="../img/tijera.svg"></div>
                         </label>
                     </fieldset>
                 </span>
@@ -54,12 +62,14 @@
                     </fieldset> 
                 </span>
             </article>
-            <article class="row d-flex justify-content-center">
+            <article class="row d-flex justify-content-center my-3">
                 <table class="border border-dark text-center">
                     <thead>
                         <tr>
                             <th>Vuelta</th>
                             <th>Resultado</th>
+                            <th>Movimiento Jugador</th>
+                            <th>Movimiento PC</th>
                         </tr>
                     </thead>
                     <tbody id="bodyResultado"></tbody>
@@ -68,6 +78,7 @@
         </section>
     </main>
     <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
